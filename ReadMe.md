@@ -115,6 +115,7 @@ Always restart the frontend after modifying configuration files or CUDA programs
 ## Acknowledgments
 
 This Docker image was built using the main GVirtuS repository: [GVirtuS](https://github.com/gvirtus/GVirtuS)
+
 This work is part of the CLEVER project.
 
 
