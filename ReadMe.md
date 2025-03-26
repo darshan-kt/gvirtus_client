@@ -5,11 +5,11 @@ cuDNN, cuFFT, cuBLAS, cuSPARSE, cuSOLVER
 
 GVirtuS follows a split-driver model, ensuring seamless distribution of computational tasks from a non-GPU machine to a GPU-enabled machine. The software consists of three main components:
 
-** Frontend ** - Manages CUDA API calls from the application.
+**Frontend** - Manages CUDA API calls from the application.
 
-** Backend ** - Handles execution of GPU workloads.
+**Backend** - Handles execution of GPU workloads.
 
-** Communicator ** - Facilitates communication between frontend and backend components.
+**Communicator** - Facilitates communication between frontend and backend components.
 
 This repository demonstrates how to run a simple matrix multiplication application on a lightweight client device with minimal or no GPU hardware.
 
@@ -19,7 +19,6 @@ This repository demonstrates how to run a simple matrix multiplication applicati
 
 Run the following command to build a GVirtuS Docker image. Ensure that both the Dockerfile and simple_matrix.cu files are in the same directory.
 ```
-
 $ docker build -t gvirtus_env .
 ```
 
@@ -65,7 +64,7 @@ nano properties.json
 Modify the IP and Port settings to match the backend server:
 ```
 {
-    "server_address": "130.225.243.38",
+    "server_address": "192.168.0.123",
     "port": "8888"
 }
 ```
@@ -115,7 +114,7 @@ Always restart the frontend after modifying configuration files or CUDA programs
 
 ## Acknowledgments
 
-This Docker image was built using the main GVirtuS repository: GVirtuS.
+This Docker image was built using the main GVirtuS repository: [GVirtuS](https://github.com/gvirtus/GVirtuS)
 This work is part of the CLEVER project.
 
 
