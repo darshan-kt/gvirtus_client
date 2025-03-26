@@ -14,8 +14,15 @@ GVirtuS follows a split-driver model, ensuring seamless distribution of computat
 This repository demonstrates how to run a simple matrix multiplication application on a lightweight client device with minimal or no GPU hardware.
 
 ## Running the GVirtuS Frontend Component
+### Step 1: Clone the repository 
 
-### Step 1: Create GVirtuS Docker Image
+clone the repo and navigate into cloned directory
+```
+git clone https://github.com/darshan-kt/gvirtus_client.git
+cd gvirtus_client
+```
+
+### Step 2: Create GVirtuS Docker Image
 
 Run the following command to build a GVirtuS Docker image. Ensure that both the Dockerfile and simple_matrix.cu files are in the same directory.
 ```
@@ -26,14 +33,14 @@ Note: This step installs Ubuntu, GVirtuS software, its dependencies, and copies 
 
 
 
-### Step 2: Create a Docker Container
+### Step 3: Create a Docker Container
 
 Use the created Docker image to launch a GVirtuS container:
 ```
 $ docker run --privileged --name gvirtus_frontend -t gvirtus_env bash
 ```
 
-### Step 3: Execute the GVirtuS Frontend with Matrix Multiplication
+### Step 4: Execute the GVirtuS Frontend with Matrix Multiplication
 
 Run the frontend component using the following command:
 ```
@@ -57,9 +64,10 @@ cd ${GVIRTUS_HOME}/etc
 
 ### Step 3: Edit the Configuration File
 
-Open properties.json using an editor like nano, vi, or vim:
-
+Open properties.json using an CLI editor like nano, vi, or vim:
+```
 nano properties.json
+```
 
 Modify the IP and Port settings to match the backend server:
 ```
